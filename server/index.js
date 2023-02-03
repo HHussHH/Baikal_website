@@ -15,6 +15,13 @@ const db = mysql.createPool({
   database: "baikal_server",
 });
 
+app.get("/api/get", (req, res) => {
+  const sqlGet = "SELECT * FROM baikal_server.ourproject;";
+  db.query(sqlGet, (error, result) => {
+    res.send(result);
+  });
+});
+
 app.get("/", (req, res) => {
   const sqlInsert =
     "INSERT INTO `baikal_server`.`test` (`value1`, `value2`) VALUES ('test', 'test2@gmail.com');";
