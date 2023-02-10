@@ -1,19 +1,34 @@
+import { useEffect, useState } from "react";
 import "./soloNews.scss";
-import { newsData } from "../../data/news";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
-const SoloNews = ({ currentNewsId }) => {
-  const currentData = newsData.filter((item) => {
-    return item.id === currentNewsId;
-  });
-  const { title, text, img } = currentData[0];
+import axios from "axios";
+
+const SoloNews = () => {
+  const [news, setNews] = useState({});
+  const location = useLocation();
+  const newsId = location.pathname.split("/")[2];
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/news/${newsId}`);
+        setNews(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [news]);
   return (
     <div className="soloNews">
       <div className="container">
         <div className="soloNews__inner">
-          <h1 className="soloNews__title">{title}</h1>
-          {img ? <img className="soloNews__img" src={img} alt="" /> : null}
-          <div className="soloNews__text">{text}</div>
+          <h1 className="soloNews__title">{news.title}</h1>
+          {news.title ? (
+            <img className="soloNews__img" src="img" alt="" />
+          ) : null}
+          <div className="soloNews__text">{news.desc}</div>
           <div className="soloNews__links">
             <NavLink className="soloNews__back" to="/">
               Главная страница

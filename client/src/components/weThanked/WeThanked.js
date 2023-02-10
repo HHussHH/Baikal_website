@@ -28,7 +28,7 @@ const WeThanked = ({ setId }) => {
             <div className="weThanked__card-desctiption">{card.desc}</div>
             <NavLink
               className="weThanked__card-link"
-              to={`/${card.id}`}
+              to={`/WeThanked/${card.id}`}
               onClick={() => setId(card.id)}
             >
               Читать дальше

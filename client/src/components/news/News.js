@@ -1,7 +1,6 @@
 //node
 import { NavLink } from "react-router-dom";
 //components
-import { newsData } from "../../data/news";
 import axios from "axios";
 //style
 import "./news.scss";
