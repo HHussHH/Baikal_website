@@ -1,0 +1,12 @@
+.ads{
+    margin-top: 50px;
+    padding: 20px 0;
+    box-shadow: 0 0 1px 0 #000;
+    &__card{
+      
+        max-width: 100px;
+        height: 100px;
+        background-color: #000;
+    }
+}
+

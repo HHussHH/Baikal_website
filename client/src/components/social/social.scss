@@ -1,0 +1,35 @@
+.social{
+    margin-top: 50px;
+    
+   &__inner{
+    width: 100%;
+    height: auto;
+   }
+   &__title{
+    text-align: center;
+    font-weight: 700;
+    color:rgb(157, 117, 80);
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 50px;
+    padding-bottom: 30px;
+   }
+   &__cards{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+   }
+   &__card{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+   
+   }
+   &__card{
+        width: 90px;
+        height: 90px;
+        border-radius:50px;
+        background:rgba(54, 48, 48, 0.412);
+   }
+}

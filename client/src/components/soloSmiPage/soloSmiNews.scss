@@ -1,0 +1,49 @@
+.soloSmiNews {
+  margin-top: 80px;
+  text-align: center;
+  &__inner {
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0px 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  &__date {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  &__title {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    padding: 0px 100px 40px;
+    border-bottom: 1px solid rgba(249, 221, 7, 0.458);
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px 10px;
+  }
+
+  &__back,
+  &__all {
+    text-decoration: none;
+    background-color: rgba(199, 174, 14, 0.557);
+    padding: 10px 45px;
+    border-radius: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.724);
+    transition: all 0.2s linear;
+    &:hover {
+      border-radius: 20px;
+    }
+  }
+}

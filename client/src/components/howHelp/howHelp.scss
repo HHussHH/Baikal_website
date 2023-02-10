@@ -1,0 +1,50 @@
+.help {
+  &__inner {
+    background-color: rgba(249, 249, 221, 0.6);
+    width: 100%;
+    border-radius: 50px;
+    min-height: auto;
+  }
+  &__title {
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 55px;
+    text-align: center;
+    margin: 80px auto 50px;
+    color: #274684;
+    letter-spacing: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  &__description {
+    padding: 0 25%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.713);
+  }
+  &__variant {
+    width: 70%;
+    min-height: 100px;
+    background-color: rgba(194, 190, 190, 0.319);
+    margin: 40px auto;
+    padding: 30px 0px 30px 30px;
+    border-radius: 20px;
+    &-title {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+    &-desctiption {
+      width: 80%;
+      line-height: 30px;
+      font-size: 18px;
+
+      color: rgba(0, 0, 0, 0.713);
+    }
+  }
+  &__footer {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+}

@@ -1,0 +1,89 @@
+.weThanked {
+  &__title {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #274684;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+  }
+  &__inner {
+    width: 80%;
+    margin-top: 100px;
+    margin: 100px auto 0px;
+    height: auto;
+    border-radius: 50px;
+    background-color: rgba(249, 249, 221, 0.6);
+    padding: 0 50px 10px;
+  }
+  &__card {
+    display: block;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 200px;
+    border-radius: 20px;
+    background-color: rgba(223, 179, 116, 0.467);
+    box-shadow: 10px 10px 10px rgba(171, 152, 91, 0.574);
+
+    align-items: center;
+    justify-self: center;
+    &-img {
+      padding-top: 20px;
+      & img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        border-radius: 10px;
+        background-color: #000;
+        margin: 0 auto 10px;
+      }
+    }
+    &-inner {
+      height: auto;
+    }
+    &-date {
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    &-title {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    &-desctiption {
+      padding-top: 10px;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    &-link {
+      display: inline-block;
+      text-decoration: none;
+      color: #000;
+      font-family: "Sofia Sans Extra Condensed", sans-serif;
+      font-size: 25px;
+      font-weight: 600;
+      padding-bottom: 5px;
+      position: relative;
+      &::after {
+        display: block;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.517);
+        transition: all 0.3s linear;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+  }
+}

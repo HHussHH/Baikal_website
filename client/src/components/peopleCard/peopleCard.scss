@@ -1,0 +1,96 @@
+.peopleCards {
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 55px;
+    text-align: center;
+    margin: 80px auto;
+    color: #274684;
+    letter-spacing: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+}
+.peopleCard {
+  margin-bottom: 50px;
+  border-radius: 10px;
+  width: 500px;
+  min-height: 600px;
+  height: auto;
+  text-align: center;
+  background-color: rgba(249, 249, 221, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  &__title {
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+  }
+  &__img {
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+    height: 300px;
+    background-color: rgb(92, 89, 89);
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+  &__slider {
+    width: 90%;
+    height: 6px;
+    background-color: #000;
+    margin: 0 auto 40px;
+    &-text {
+      font-family: "Sofia Sans Extra Condensed", sans-serif;
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+    &-progres {
+      display: block;
+      transform: translateY(-1px);
+      width: 0%;
+      height: 8px;
+      background-color: green;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(189, 121, 4);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0);
+    transition: all 0.2s linear;
+    &:hover {
+      box-shadow: 0 0 12px 0 rgb(0, 0, 0);
+    }
+  }
+}

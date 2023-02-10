@@ -1,0 +1,52 @@
+.soloNews {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 100px;
+  &__inner {
+    border-radius: 30px;
+    margin: 0 auto;
+    width: 70%;
+    min-height: auto;
+    background-color: rgb(210, 207, 203);
+  }
+  &__title {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 30px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  &__text {
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0 80px;
+    font-size: 22px;
+    margin-bottom: 100px;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+  &__img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 4px solid rgba(0, 0, 0, 0.398);
+  }
+  &__back,
+  &__allNews {
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.4s linear;
+    &:hover {
+      border-radius: 30px;
+      color: red;
+    }
+  }
+}
