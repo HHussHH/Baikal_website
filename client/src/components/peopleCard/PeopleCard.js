@@ -1,21 +1,36 @@
 import "./peopleCard.scss";
-
-import { peopleCardData } from "../../data/peopleNeedHelp";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 const PeopleCard = ({ getId }) => {
+  const [data, setData] = useState([{}]);
+
+  useEffect(() => {
+    const data = async () => {
+      try {
+        const res = await axios.get("/needHelp");
+        setData(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    data();
+  }, [setData]);
+
   const createPeopleCardElement = () => {
-    const cardPeople = peopleCardData.map((card) => {
-      const currentSliderProgres =
-        (card.moneyCurrentCount * 100) / card.moneyToFull;
+    const cardPeople = data.map((card, index) => {
+      const currentSliderProgres = (card.sliderNow * 100) / card.sliderMax;
+
       return (
-        <div className="peopleCard" key={card.id}>
+        <div className="peopleCard" key={index}>
           <h2 className="peopleCard__title">{card.name}</h2>
           <div className="peopleCard__img">
-            <img src={card.img} alt={card.name} />
+            <img src={`../upload/needHelp/${card.img}`} alt={card.name} />
           </div>
-          <h3 className="peopleCard__text">{card.description}</h3>
+          <h3 className="peopleCard__text">{card.desc}</h3>
           <div className="peopleCard__slider-text">
-            {card.moneyCurrentCount}/{card.moneyToFull}
+            {card.sliderNow}/{card.sliderMax}
           </div>
           <div className="peopleCard__slider">
             <div
@@ -25,7 +40,7 @@ const PeopleCard = ({ getId }) => {
           </div>
           <NavLink
             className="peopleCard__btn"
-            to={`${card.link}${card.id}`}
+            to={`/HowHelp/${card.id}`}
             onClick={() => getId(card.id)}
           >
             Пожертвовать

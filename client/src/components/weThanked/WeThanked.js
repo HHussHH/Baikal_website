@@ -1,24 +1,34 @@
 //components
-import { weThankedData } from "../../data/weThankedData";
 import { NavLink } from "react-router-dom";
 //style
 import "./weThanked.scss";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const WeThanked = ({ setId }) => {
+  const [data, setData] = useState([{}]);
+
+  useEffect(() => {
+    const data = async () => {
+      const res = await axios.get("/weThanked");
+      setData(res.data);
+    };
+    data();
+  }, [setData]);
   const createWeThankedCards = () => {
-    const Cards = weThankedData.map((card) => {
+    const Cards = data.map((card, id) => {
       return (
-        <div className="weThanked__card" key={card.id}>
+        <div className="weThanked__card" key={id}>
           <div className="weThanked__card-img">
-            <img src={card.img} alt="" />
+            <img src={`../upload/weThanked/${card.img}`} alt="" />
           </div>
           <div className="weThanked__card-inner">
             <div className="weThanked__card-date">{card.date}</div>
             <div className="weThanked__card-title">{card.title}</div>
-            <div className="weThanked__card-desctiption">{card.text}</div>
+            <div className="weThanked__card-desctiption">{card.desc}</div>
             <NavLink
               className="weThanked__card-link"
-              to={`${card.link}${card.id}`}
+              to={`/${card.id}`}
               onClick={() => setId(card.id)}
             >
               Читать дальше
