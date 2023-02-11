@@ -1,12 +1,12 @@
 //node
 import { NavLink } from "react-router-dom";
-//components
-//style
-import "./ourPrograms.scss";
 
 import axios from "axios";
 
 import { useState, useEffect } from "react";
+//components
+//style
+import "./ourPrograms.scss";
 
 const OurPrograms = ({ setId }) => {
   const [data, setData] = useState([{}]);
@@ -23,9 +23,9 @@ const OurPrograms = ({ setId }) => {
     data();
   }, [setData]);
 
-  console.log(data[0].id);
   const createCard = () => {
     const cards = data.map((card, index) => {
+      const currentSliderProgress = (card.sliderNow * 100) / card.sliderMax;
       return (
         <div className="ourPrograms__card" key={index}>
           <div className="ourPrograms__card-title">{card.title}</div>
@@ -38,7 +38,7 @@ const OurPrograms = ({ setId }) => {
               <div
                 className="ourPrograms__card-slider__count"
                 style={{
-                  width: (card.sliderNow * 100) / card.sliderMax + "%",
+                  width: currentSliderProgress + "%",
                 }}
               ></div>
               <div className="ourPrograms__card-slider__count-start">

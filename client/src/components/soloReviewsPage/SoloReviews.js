@@ -18,7 +18,8 @@ const SoloReviews = () => {
       }
     };
     fetchData();
-  }, [review]);
+  }, [reviewId]);
+
   return (
     <div className="soloReviews">
       <div className="container">

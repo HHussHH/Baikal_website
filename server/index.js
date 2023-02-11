@@ -8,7 +8,7 @@ import { getWethanked, wethankedQuery } from "./controllers/we_thanked.js";
 import { getSmi, smiQuery } from "./controllers/smi.js";
 import { contactsQuery } from "./controllers/contacts.js";
 import { getNews, newsQuery } from "./controllers/news.js";
-
+import { anotherQuery } from "./controllers/another.js";
 const port = 8800;
 const app = express();
 
@@ -27,6 +27,7 @@ app.get("/api/smi/:id", getSmi);
 app.get("/api/contacts", contactsQuery);
 app.get("/api/news", newsQuery);
 app.get("/api/news/:id", getNews);
+app.get("/api/another", anotherQuery);
 
 app.listen(port, () => {
   console.log(`Server start on port ${port}`);

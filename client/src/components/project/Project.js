@@ -1,5 +1,4 @@
 import React from "react";
-import { programsData } from "../../data/programs";
 import { NavLink, useLocation } from "react-router-dom";
 import "./project.scss";
 import axios from "axios";
@@ -7,9 +6,7 @@ import { useState, useEffect } from "react";
 
 const Project = () => {
   const [project, setProject] = useState({});
-
   const location = useLocation();
-
   const projectId = location.pathname.split("/")[2];
 
   useEffect(() => {

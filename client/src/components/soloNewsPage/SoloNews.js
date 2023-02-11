@@ -19,7 +19,8 @@ const SoloNews = () => {
       }
     };
     fetchData();
-  }, [news]);
+  }, [newsId]);
+
   return (
     <div className="soloNews">
       <div className="container">

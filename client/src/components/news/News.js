@@ -1,10 +1,11 @@
 //node
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 //components
 import axios from "axios";
 //style
 import "./news.scss";
-import { useEffect, useState } from "react";
+
 const News = ({ setCurrentNewsId }) => {
   const [data, setData] = useState([{}]);
 

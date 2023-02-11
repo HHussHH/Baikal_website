@@ -2,6 +2,7 @@
 import { NavLink } from "react-router-dom";
 //style
 import "./weThanked.scss";
+//node
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -15,6 +16,7 @@ const WeThanked = ({ setId }) => {
     };
     data();
   }, [setData]);
+
   const createWeThankedCards = () => {
     const Cards = data.map((card, id) => {
       return (
