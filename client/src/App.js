@@ -30,6 +30,7 @@ function App() {
   const [idReviews, setIdidReviews] = useState();
   const [idSmiNews, setIdSmiNews] = useState();
   const [giveHelpForm, setGiveHelpForm] = useState(false);
+
   return (
     <div className="App">
       {giveHelpForm ? (
