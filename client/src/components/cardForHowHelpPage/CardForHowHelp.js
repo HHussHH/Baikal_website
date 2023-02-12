@@ -6,7 +6,6 @@ const CardForHowHelp = () => {
   const [card, setCard] = useState({});
 
   const location = useLocation();
-
   const cardId = location.pathname.split("/")[2];
 
   useEffect(() => {

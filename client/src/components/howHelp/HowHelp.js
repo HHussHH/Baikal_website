@@ -2,7 +2,7 @@
 import "./howHelp.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import parse from "html-react-parser";
 const HowHelp = () => {
   const [data, setData] = useState([{}]);
 
@@ -25,7 +25,12 @@ const HowHelp = () => {
           <h2 className="help__variant-title">
             {item.id}. {item.title}
           </h2>
-          <p className="help__variant-desctiption">{item.desc}</p>
+          <p className="help__variant-desctiption">{parse(`${item.desc}`)}</p>
+          <div className="help__variant-img">
+            {item.img ? (
+              <img src={`../upload/howHelp/${item.img}`} alt="" />
+            ) : null}
+          </div>
         </div>
       );
     });
